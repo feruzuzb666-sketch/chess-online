@@ -2,10 +2,10 @@
   "name": "chess-online",
   "version": "1.0.0",
   "description": "Online shaxmat o'yini - Socket.io bilan",
-  "main": "server/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.22.1",
