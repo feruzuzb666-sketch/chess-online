@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: chess-online
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      # Firebase Admin SDK uchun kerak bo'lgan env variables
+      # Render dashboard'ida qo'lda kiriting (JSON formatda):
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false   # Render dashboard'ida qo'lda kiriting
+      - key: FIREBASE_DATABASE_URL
+        sync: false   # Masalan: https://your-project-id-default-rtdb.firebaseio.com
